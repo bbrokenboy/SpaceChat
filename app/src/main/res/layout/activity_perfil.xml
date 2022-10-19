@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/perfil"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".Perfil">
+
+    <TextView
+        android:id="@+id/txtNomeUser"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="48dp"
+        android:autoSizeTextType="uniform"
+        android:editable="false"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAlterarFotoPerfil" />
+
+    <TextView
+        android:id="@+id/txtUserName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:editable="false"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeUser" />
+
+    <TextView
+        android:id="@+id/txtUserEmail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:editable="false"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUserName" />
+
+    <TextView
+        android:id="@+id/txtNumber"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:editable="false"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUserEmail" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginBottom="381dp"
+        app:cardCornerRadius="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/perfil_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_account_img" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnAlterarFotoPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_blue_shape"
+        android:text="Alterar foto de perfil"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+        app:layout_constraintVertical_bias="0.048" />
+
+    <Button
+        android:id="@+id/btnLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/round_blue_shape"
+        android:text="Sair"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumber" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:outlineSpotShadowColor="@android:color/transparent"
+        app:labelVisibilityMode="selected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_base" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

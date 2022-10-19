@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".CadastroProduto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewProdutoView"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgProdutoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_insert_photo" />
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/NomeProdutoView"
+        android:editable="false"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="213dp"
+        android:layout_marginBottom="19dp"
+        android:text="Nome do produto"
+        android:textColor="@color/white"
+        android:textSize="50px"
+        app:layout_constraintBottom_toTopOf="@+id/DescricaoProdutoView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/DescricaoProdutoView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:editable="false"
+        android:layout_marginBottom="21dp"
+        android:text="Descrição do produto"
+        android:textColor="@color/white"
+        android:textSize="50px"
+        app:layout_constraintBottom_toTopOf="@+id/ValorProdutoView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NomeProdutoView" />
+
+    <TextView
+        android:id="@+id/ValorProdutoView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="27dp"
+        android:text="Valor do produto"
+        android:editable="false"
+        android:textColor="@color/white"
+        android:textSize="50px"
+        app:layout_constraintBottom_toTopOf="@+id/btnPubProdutoView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DescricaoProdutoView" />
+
+    <Button
+        android:id="@+id/btnPubProdutoView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="73dp"
+        android:background="@drawable/round_blue_shape"
+        android:text="Enviar Mensagem ao vendedor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ValorProdutoView" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:outlineSpotShadowColor="@android:color/transparent"
+        app:labelVisibilityMode="selected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_base" />
+</androidx.constraintlayout.widget.ConstraintLayout>
